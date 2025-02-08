@@ -15,13 +15,38 @@ import {
 import { motion } from 'framer-motion';
 import './App.css';
 
+// Import Molecule3D from the module you created.
+import Molecule3D, {attachRendererToContainer, lightcamerasetup, animate, clearScene} from './Molecule3D';
+
+// Helper function to render molecules into a given container.
+// (This version assumes you have modified Molecule3D so that its constructor signature is:
+//    new Molecule3D(formula, xOffset, container)
+// instead of always appending to document.body.)
+const renderMolecules = (molecules, container) => {
+  if (!container) return;
+  // Clear out the container (for example, remove any previous canvas)
+  container.innerHTML = '';
+  // Render each molecule with a slight horizontal offset.
+  attachRendererToContainer(container);
+  lightcamerasetup();
+  clearScene();
+  molecules.forEach((formula, index) => {
+    // Create a new Molecule3D instance; note that you may need to adjust this
+    // depending on how you’ve reworked your Molecule3D class.
+    for (let i = 0; i < formula.coefficient; i++) {
+      new Molecule3D(formula.name, index * 5 + i*2);
+    }
+    animate();
+  });
+};
+
 function App() {
-  // Create two refs—one for each 3D viewer box.
+  // Refs for the viewer boxes.
   const viewerReactantsRef = useRef(null);
   const viewerProductsRef = useRef(null);
   const [numReactants, setNumReactants] = useState(1);
-  const [reactants, setReactants] = useState([{name: '',coefficient: ''}]);
-  const [products, setProducts] = useState([{name: '',coefficient: ''}])
+  const [reactants, setReactants] = useState([{ name: '', coefficient: '' }]);
+  const [products, setProducts] = useState([]);
 
   // Validate molecule formula: only allow groups of allowed elements (C, H, N, O, P, S)
   // optionally followed by digits.
@@ -59,8 +84,9 @@ function App() {
     setReactants(updated);
   };
 
-  const handleBond = () => {
-    // Validate that all reactants have a valid molecular formula and coefficient.
+  // This handler will render the reactant molecules into the reactants viewer.
+  const handleShowReactants = () => {
+    // Validate that each reactant field is complete and valid.
     const invalidReactants = reactants.filter(
       (r) =>
         r.name === '' ||
@@ -70,18 +96,44 @@ function App() {
     );
     if (invalidReactants.length > 0) {
       alert(
-        'Please check that all molecule formulae are valid (only C, H, N, O, P, S allowed) and that all coefficients are positive integers.'
+        'Please check that all reactant molecule formulae are valid (only C, H, N, O, P, S allowed) and that all coefficients are positive integers.'
+      );
+      return;
+    }
+    // Create an array of formulas (if you have coefficients, you might want to render each formula
+    // as many times as the coefficient indicates – here we simply render one instance per reactant)
+    // const reactantFormulas = reactants.map((r) => r.name);
+    renderMolecules(reactants, viewerReactantsRef.current);
+  };
+
+  // The handleBond function is triggered when the Bond button is pressed.
+  // In addition to (or instead of) making your fetch call, you can also render the product molecules.
+  const handleBond = () => {
+    // Validate reactants first.
+    const invalidReactants = reactants.filter(
+      (r) =>
+        r.name === '' ||
+        !isValidFormula(r.name) ||
+        r.coefficient === '' ||
+        !isValidCoefficient(r.coefficient)
+    );
+    if (invalidReactants.length > 0) {
+      alert(
+        'Please check that all reactant molecule formulae are valid (only C, H, N, O, P, S allowed) and that all coefficients are positive integers.'
       );
       return;
     }
     console.log('Bonding these reactants:', reactants);
+
+    // Your API call (for example, to calculate a reaction) remains the same.
     fetch('http://localhost:3000/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        reactants: reactants}),
+        reactants: reactants,
+      }),
     })
       .then((response) => {
         if (!response.ok) {
@@ -91,13 +143,15 @@ function App() {
       })
       .then((data) => {
         console.log('Response from API:', data);
-        alert('Bond successful! Check the console for results.');
+        // Assume that data.reactions[0].products is an array of product formulas.
         setProducts(data.reactions[0].products);
-        console.log(products);
+        // Render the product molecules in the products viewer.
+        renderMolecules(data.reactions[0].products, viewerProductsRef.current);
+        // alert('Bond successful! Check the console for results.');
       })
       .catch((error) => {
         console.error('Error:', error);
-        alert('Bond failed. Please check the console for details.');
+        alert('Bond failed. Check the inputs.');
       });
   };
 
@@ -106,7 +160,7 @@ function App() {
       <CssBaseline />
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #0d1117, #1a1a2e)',
+          background: '#70b6a1',
           minHeight: '100vh',
           color: 'white',
           pb: 6,
@@ -134,7 +188,7 @@ function App() {
                 fontFamily: '"Lora", serif',
               }}
             >
-              Organic Formulae Visualization
+              BOND
             </Typography>
           </Toolbar>
         </AppBar>
@@ -167,7 +221,7 @@ function App() {
                       variant="h5"
                       gutterBottom
                       sx={{
-                        color: '#b0bec5',
+                        color: 'black',
                         fontWeight: 600,
                         fontFamily: '"Lora", serif',
                         textAlign: 'center',
@@ -183,11 +237,12 @@ function App() {
                       variant="outlined"
                       size="small"
                       className="lora-regular"
+                      InputLabelProps={{ style: { color: 'black', fontFamily: '"Lora", serif' } }}
                       sx={{
                         mb: 3,
                         backgroundColor: 'rgba(0,0,0,0.2)',
                         borderRadius: '4px',
-                        input: { color: '#cfd8dc' },
+                        input: { color: 'black' },
                         fontFamily: '"Lora", serif',
                       }}
                       inputProps={{ min: 1 }}
@@ -201,7 +256,8 @@ function App() {
                         const formulaError =
                           reactant.name !== '' && !isValidFormula(reactant.name);
                         const coefficientError =
-                          reactant.coefficient !== '' && !isValidCoefficient(reactant.coefficient);
+                          reactant.coefficient !== '' &&
+                          !isValidCoefficient(reactant.coefficient);
                         return (
                           <Box
                             key={index}
@@ -219,11 +275,12 @@ function App() {
                               variant="outlined"
                               size="small"
                               type="number"
+                              InputLabelProps={{ style: { color: 'black', fontFamily: '"Lora", serif' } }}
                               inputProps={{ min: 1, step: 1 }}
                               sx={{
                                 width: 80,
                                 backgroundColor: 'rgba(0,0,0,0.2)',
-                                input: { color: '#cfd8dc' },
+                                input: { color: 'black' },
                                 fontFamily: '"Lora", serif',
                               }}
                               value={reactant.coefficient}
@@ -235,13 +292,14 @@ function App() {
                             />
 
                             <TextField
-                              label="Molecule Formula"
+                              label="Molecular Formula"
                               variant="outlined"
                               size="small"
+                              InputLabelProps={{ style: { color: 'black', fontFamily: '"Lora", serif' } }}
                               sx={{
                                 width: 140,
                                 backgroundColor: 'rgba(0,0,0,0.2)',
-                                input: { color: '#cfd8dc' },
+                                input: { color: 'black' },
                                 fontFamily: '"Lora", serif',
                               }}
                               value={reactant.name}
@@ -257,18 +315,41 @@ function App() {
                       })}
                     </Box>
 
-                    {/* Enlarged Bond Button (Horizontally only) with Bigger Text */}
-                    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3, gap: 2 }}>
                       <Button
                         variant="contained"
                         sx={{
                           background: 'linear-gradient(45deg, #607d8b, #455a64)',
                           color: '#fff',
-                          padding: '10px 100px', // only horizontal padding is increased
+                          padding: '10px 40px',
                           borderRadius: '8px',
                           textTransform: 'none',
                           fontWeight: 'bold',
-                          fontSize: '2rem',
+                          fontSize: '1.5rem',
+                          fontFamily: '"Lora", serif',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                          transition: 'background 0.3s, transform 0.2s',
+                          '&:hover': {
+                            background: 'linear-gradient(45deg, #455a64, #607d8b)',
+                            transform: 'scale(1.02)',
+                          },
+                        }}
+                        onClick={handleShowReactants}
+                      >
+                        Show Reactants
+                      </Button>
+
+                      <Button
+                        variant="contained"
+                        sx={{
+                          background: 'linear-gradient(45deg, #607d8b, #455a64)',
+                          color: '#fff',
+                          padding: '10px 40px',
+                          borderRadius: '8px',
+                          textTransform: 'none',
+                          fontWeight: 'bold',
+                          fontSize: '1.5rem',
+                          fontFamily: '"Lora", serif',
                           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
                           transition: 'background 0.3s, transform 0.2s',
                           '&:hover': {
@@ -278,7 +359,7 @@ function App() {
                         }}
                         onClick={handleBond}
                       >
-                        Bond
+                        Show Products
                       </Button>
                     </Box>
                   </CardContent>
@@ -306,7 +387,7 @@ function App() {
                       variant="h5"
                       gutterBottom
                       sx={{
-                        color: '#b0bec5',
+                        color: 'black',
                         fontWeight: 600,
                         fontFamily: '"Lora", serif',
                       }}
@@ -323,10 +404,11 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
+                        position: 'relative',
                       }}
                     >
                       <Typography variant="body1" color="gray" className="lora-regular">
-                        Interactive 3D viewer coming soon...
+                        3D viewer for reactants will be shown here.
                       </Typography>
                     </Box>
                   </CardContent>
@@ -354,7 +436,7 @@ function App() {
                       variant="h5"
                       gutterBottom
                       sx={{
-                        color: '#b0bec5',
+                        color: 'black',
                         fontWeight: 600,
                         fontFamily: '"Lora", serif',
                       }}
@@ -374,7 +456,7 @@ function App() {
                       }}
                     >
                       <Typography variant="body1" color="gray" className="lora-regular">
-                        Interactive 3D viewer coming soon...
+                        3D viewer for products will be shown here.
                       </Typography>
                     </Box>
                   </CardContent>
