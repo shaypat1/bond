@@ -17,7 +17,7 @@ app.use(cors({
 
 // Load CSV data into memory
 let chemicalReactions = [];
-fs.createReadStream("organic_reactions.csv")
+fs.createReadStream("data/organic_reactions.csv")
   .pipe(csvParser())
   .on("data", (row) => {
     chemicalReactions.push(row);
