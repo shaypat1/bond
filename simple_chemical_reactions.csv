@@ -1,0 +1,9 @@
+reactant_1,coefficient_1,structure_1,bond_type_1,reactant_2,coefficient_2,structure_2,bond_type_2,reactant_3,coefficient_3,structure_3,bond_type_3,product_1,coefficient_p1,structure_p1,bond_type_p1,product_2,coefficient_p2,structure_p2,bond_type_p2,product_3,coefficient_p3,structure_p3,bond_type_p3
+H_2,1,Linear,Covalent,O_2,0.5,Linear,Covalent,,,,,H_2O,1,Bent,Polar Covalent,,,,,,,,
+Na,2,Metallic,Metallic,Cl_2,1.0,Linear,Covalent,,,,,NaCl,2,Cubic,Ionic,,,,,,,,
+H_2O,2,Bent,Polar Covalent,,,,,,,,,H_2,2,Linear,Covalent,O_2,1.0,Linear,Covalent,,,,
+CaCO_3,1,Cubic,Ionic,,,,,,,,,CaO,1,Cubic,Ionic,CO_2,1.0,Linear,Covalent,,,,
+Zn,1,Metallic,Metallic,HCl,2.0,Linear,Polar Covalent,,,,,ZnCl_2,1,Cubic,Ionic,H_2,1.0,Linear,Covalent,,,,
+Fe,1,Metallic,Metallic,CuSO_4,1.0,Cubic,Ionic,,,,,FeSO_4,1,Cubic,Ionic,Cu,1.0,Metallic,Metallic,,,,
+AgNO_3,1,Cubic,Ionic,NaCl,1.0,Cubic,Ionic,,,,,AgCl,1,Cubic,Ionic,NaNO_3,1.0,Cubic,Ionic,,,,
+BaCl_2,1,Cubic,Ionic,Na_2SO_4,1.0,Cubic,Ionic,,,,,BaSO_4,1,Cubic,Ionic,NaCl,2.0,Cubic,Ionic,,,,
