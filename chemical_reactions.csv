@@ -1,0 +1,101 @@
+reactant_1,coefficient_1,structure_1,bond_type_1,reactant_2,coefficient_2,structure_2,bond_type_2,reactant_3,coefficient_3,structure_3,bond_type_3,product_1,coefficient_p1,structure_p1,bond_type_p1,product_2,coefficient_p2,structure_p2,bond_type_p2,product_3,coefficient_p3,structure_p3,bond_type_p3
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+C_3H_8,1,Tetrahedral,Covalent,O_2,5.0,Linear,Covalent,,,,,CO_2,3,Linear,Covalent,H_2O,4.0,Bent,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+C_6H_12O_6,1,Hexagonal,Covalent,O_2,6.0,Linear,Covalent,,,,,CO_2,6,Linear,Covalent,H_2O,6.0,Bent,Covalent,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+Al,2,Metallic,Metallic,Fe_2O_3,1.0,Cubic,Ionic,,,,,Al_2O_3,1,Cubic,Ionic,Fe,2.0,Metallic,Metallic,,,,
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+C_6H_12O_6,1,Hexagonal,Covalent,O_2,6.0,Linear,Covalent,,,,,CO_2,6,Linear,Covalent,H_2O,6.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_6H_12O_6,1,Hexagonal,Covalent,O_2,6.0,Linear,Covalent,,,,,CO_2,6,Linear,Covalent,H_2O,6.0,Bent,Covalent,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+C_3H_8,1,Tetrahedral,Covalent,O_2,5.0,Linear,Covalent,,,,,CO_2,3,Linear,Covalent,H_2O,4.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2O_2,2,Bent,Covalent,,,,,,,,,H_2O,2,Bent,Covalent,O_2,1.0,Linear,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_6H_12O_6,1,Hexagonal,Covalent,O_2,6.0,Linear,Covalent,,,,,CO_2,6,Linear,Covalent,H_2O,6.0,Bent,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+C_2H_6,1,Tetrahedral,Covalent,O_2,3.5,Linear,Covalent,,,,,CO_2,2,Linear,Covalent,H_2O,3.0,Bent,Covalent,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+C_3H_8,1,Tetrahedral,Covalent,O_2,5.0,Linear,Covalent,,,,,CO_2,3,Linear,Covalent,H_2O,4.0,Bent,Covalent,,,,
+Mg,1,Metallic,Metallic,O_2,0.5,Linear,Covalent,,,,,MgO,1,Cubic,Ionic,,,,,,,,
+NH_4NO_3,1,Tetrahedral,Ionic,,,,,,,,,N_2,1,Linear,Covalent,O_2,1.5,Linear,Covalent,H_2O,2.0,Bent,Covalent
+Fe_2O_3,1,Cubic,Ionic,C,3.0,Hexagonal,Covalent,,,,,Fe,2,Metallic,Metallic,CO,3.0,Linear,Covalent,,,,
+H_2SO_4,1,Tetrahedral,Covalent,NaOH,2.0,Linear,Ionic,,,,,Na_2SO_4,1,Cubic,Ionic,H_2O,2.0,Bent,Covalent,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
+CaO,1,Cubic,Ionic,H_2O,1.0,Bent,Covalent,,,,,Ca(OH)_2,1,Trigonal Planar,Ionic,,,,,,,,
