@@ -1,0 +1,32 @@
+/* App.css */
+
+/* Global resets and font */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+}
+
+.lora-regular {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Custom scrollbar for a modern feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Smooth transition for all elements */
+* {
+  transition: all 0.3s ease;
+}
